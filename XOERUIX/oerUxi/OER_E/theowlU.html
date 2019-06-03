@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div class="owl-carousel owl-theme">
+                <div><img src="http://lorempixel.com/g/800/600/nightlife"></div>
+                <div><img src="http://lorempixel.com/g/800/600/fashion"></div>
+                <div><img src="http://lorempixel.com/g/800/600/nightlife"></div>
+                <div><img src="http://lorempixel.com/g/800/600/fashion"></div>
+                <div><img src="http://lorempixel.com/g/800/600/nightlife"></div>
+                <div><img src="http://lorempixel.com/g/800/600/fashion"></div>
+              </div>
+              <link rel="stylesheet" href="/OER_E/bootstrap-4.3.1/dist/css/bootstrap.css">
+
+              <script src="/OER_E/bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+
+              <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+              <script type="text/javascript" src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+              
+              <script type="text/javascript">
+              $('.owl-carousel').owlCarousel({
+                 loop:true,
+                 margin:10,
+                 nav:true,
+                 responsive:{
+                   0:{
+                     items:1
+                   },
+                   600:{
+                     items:3
+                   },
+                   1000:{
+                     items:5
+                   }
+                 }
+               });
+              </script>
+</body>
+</html>

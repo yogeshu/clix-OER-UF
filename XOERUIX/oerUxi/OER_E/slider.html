@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>OER CLix </title>
+        <meta name="description" content="Open education resourses clix">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="/OER_E/bootstrap-4.3.1/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="/OER_E/scss/the.css">
+        <script src="/OER_E/bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+         <script src="/OER_E/multislider.js"> </script>
+<style>
+
+h2 { margin:30px auto;}
+.container { margin:150px auto;}
+#mixedSlider {
+  position: relative;
+}
+#mixedSlider .MS-content {
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 5%;
+}
+#mixedSlider .MS-content .item {
+  display: inline-block;
+  width: 33.3333%;
+  position: relative;
+  vertical-align: top;
+  overflow: hidden;
+  height: 100%;
+  white-space: normal;
+  padding: 0 10px;
+}
+@media (max-width: 991px) {
+  #mixedSlider .MS-content .item {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  #mixedSlider .MS-content .item {
+    width: 100%;
+  }
+}
+#mixedSlider .MS-content .item .imgTitle {
+  position: relative;
+}
+#mixedSlider .MS-content .item .imgTitle .blogTitle {
+  margin: 0;
+  text-align: left;
+  letter-spacing: 2px;
+  color: #252525;
+  font-style: italic;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  bottom: 0;
+  font-weight: bold;
+  padding: 0 0 2px 10px;
+}
+#mixedSlider .MS-content .item .imgTitle img {
+  height: auto;
+  width: 100%;
+}
+#mixedSlider .MS-content .item p {
+  font-size: 16px;
+  margin: 2px 10px 0 5px;
+  text-indent: 15px;
+}
+#mixedSlider .MS-content .item a {
+  float: right;
+  margin: 0 20px 0 0;
+  font-size: 16px;
+  font-style: italic;
+  color: rgba(173, 0, 0, 0.82);
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: linear 0.1s;
+}
+#mixedSlider .MS-content .item a:hover {
+  text-shadow: 0 0 1px grey;
+}
+#mixedSlider .MS-controls button {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  outline: 0;
+  font-size: 50px;
+  top: 95px;
+  color: rgba(0, 0, 0, 0.4);
+  transition: 0.15s linear;
+}
+#mixedSlider .MS-controls button:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 992px) {
+  #mixedSlider .MS-controls button {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  #mixedSlider .MS-controls button {
+    font-size: 20px;
+  }
+}
+#mixedSlider .MS-controls .MS-left {
+  left: 0px;
+}
+@media (max-width: 767px) {
+  #mixedSlider .MS-controls .MS-left {
+    left: -10px;
+  }
+}
+#mixedSlider .MS-controls .MS-right {
+  right: 0px;
+}
+@media (max-width: 767px) {
+  #mixedSlider .MS-controls .MS-right {
+    right: -10px;
+  }
+}
+#basicSlider { position: relative; }
+
+#basicSlider .MS-content {
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 2%;
+  height: 50px;
+}
+
+#basicSlider .MS-content .item {
+  display: inline-block;
+  width: 20%;
+  position: relative;
+  vertical-align: top;
+  overflow: hidden;
+  height: 100%;
+  white-space: normal;
+  line-height: 50px;
+  vertical-align: middle;
+}
+@media (max-width: 991px) {
+
+#basicSlider .MS-content .item { width: 25%; }
+}
+@media (max-width: 767px) {
+
+#basicSlider .MS-content .item { width: 35%; }
+}
+@media (max-width: 500px) {
+
+#basicSlider .MS-content .item { width: 50%; }
+}
+
+#basicSlider .MS-content .item a {
+  line-height: 50px;
+  vertical-align: middle;
+}
+
+#basicSlider .MS-controls button { position: absolute; }
+
+#basicSlider .MS-controls .MS-left {
+  top: 35px;
+  left: 10px;
+}
+
+#basicSlider .MS-controls .MS-right {
+  top: 35px;
+  right: 10px;
+}
+</style>
+    </head>
+<body>
+
+<section class="py-5">
+
+    <div class="container-fluid">
+        <h1 class="text-center mb-3">Bootstrap Multi-Card Carousel</h1>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner row w-100 mx-auto">
+            <div class="carousel-item col-md-3 active">
+              <div class="card">
+                <img class="card-img-top img-fluid" src="http://placehold.it/800x600/f44242/fff" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card 1</h4>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-3">
+              <div class="card">
+                <img class="card-img-top img-fluid" src="http://placehold.it/800x600/418cf4/fff" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card 2</h4>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-3">
+              <div class="card">
+                <img class="card-img-top img-fluid" src="http://placehold.it/800x600/3ed846/fff" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card 3</h4>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-3">
+              <div class="card">
+                <img class="card-img-top img-fluid" src="http://placehold.it/800x600/42ebf4/fff" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card 4</h4>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-3">
+              <div class="card">
+                <img class="card-img-top img-fluid" src="http://placehold.it/800x600/f49b41/fff" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card 5</h4>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-3">
+              <div class="card">
+                <img class="card-img-top img-fluid" src="http://placehold.it/800x600/f4f141/fff" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card 6</h4>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-3">
+              <div class="card">
+                <img class="card-img-top img-fluid" src="http://placehold.it/800x600/8e41f4/fff" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card 7</h4>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+</section>
+
+
+
+
+
+
+
+
+<div id="section2">
+    <div class="back_u">
+        <h1 class="text-center" style="color:#fff;">  Testimonial cards</h1>
+    
+    
+    <div class="container">
+    
+        <div class="row">
+      
+          <div class="col-md-4 py-2">
+      
+              <figure class="snip1192">
+                  <blockquote>Calvin: Sometimes when I'm talking with others, my words can't keep up with my thoughts. I wonder why we think faster than we speak. Hobbes: Probably so we can think twice. </blockquote>
+                  <div class="author">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample1.jpg" alt="sq-sample1"/>
+                    <h5>Pelican Steve <span> LittleSnippets</span></h5>
+                  </div>
+                </figure>
+          </div>
+      
+          <div class="col-md-4 py-2">
+              <figure class="snip1192">
+                  <blockquote>Calvin: Sometimes when I'm talking with others, my words can't keep up with my thoughts. I wonder why we think faster than we speak. Hobbes: Probably so we can think twice. </blockquote>
+                  <div class="author">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample1.jpg" alt="sq-sample1"/>
+                    <h5>Pelican Steve <span> LittleSnippets</span></h5>
+                  </div>
+                </figure>
+          </div>
+          <div class="col-md-4 py-2">
+              <figure class="snip1192 hover">
+                  <blockquote>Thank you. before I begin, I'd like everyone to notice that my report is in a professional, clear plastic binder...When a report looks this good, you know it'll get an A. That's a tip kids. Write it down.</blockquote>
+                  <div class="author">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample24.jpg" alt="sq-sample24"/>
+                    <h5>Max Conversion<span> LittleSnippets</span></h5>
+                  </div>
+                </figure>
+          </div>
+      
+        </div>
+       </div>
+       </div>
+</div>
+    
+                      
+<div class="container-fluid">
+    <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
+        <div class="carousel-inner row w-100 mx-auto" role="listbox">
+            <div class="carousel-item col-md-3  active">
+               <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 1" class="thumb">
+                      <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=1" alt="slide 1">
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+               <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 3" class="thumb">
+                     <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=2" alt="slide 2">
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+               <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 4" class="thumb">
+                     <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=3" alt="slide 3">
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+                <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 5" class="thumb">
+                     <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=4" alt="slide 4">
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+              <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 6" class="thumb">
+                      <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=5" alt="slide 5">
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+               <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 7" class="thumb">
+                      <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=6" alt="slide 6">
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+               <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 8" class="thumb">
+                      <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=7" alt="slide 7">
+                    </a>
+                  </div>
+                </div>
+            </div>
+             <div class="carousel-item col-md-3  ">
+                <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 2" class="thumb">
+                     <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=8" alt="slide 8">
+                    </a>
+                  </div>
+                  
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+
+
+
+</div>
+
+
+
+
+<div id="jquery-script-menu">
+
+    <div class="jquery-script-clear"></div>
+    </div>
+    </div>
+    <div class="container">
+    <h1>jQuery Multislider Demos</h1>
+    
+    
+    <div id="mixedSlider">
+                        <div class="MS-content">
+                            <div class="item">
+                                   <div class="card border-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">Header</div>
+      <div class="card-body text-dark">
+        <h5 class="card-title">Dark card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+                                <a href="#">Read More</a>
+                            </div>
+                            <div class="item">
+                                   <div class="card border-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">Header</div>
+      <div class="card-body text-dark">
+        <h5 class="card-title">Dark card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+                                <a href="#">Read More</a>
+                            </div>
+                            <div class="item">
+                                   <div class="card border-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">Header</div>
+      <div class="card-body text-dark">
+        <h5 class="card-title">Dark card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+                                <a href="#">Read More</a>
+                            </div>
+                            <div class="item">
+                                 <div class="card border-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">Header</div>
+      <div class="card-body text-dark">
+        <h5 class="card-title">Dark card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+                                <a href="#">Read More</a>
+                            </div>
+                            <div class="item">
+                                   <div class="card border-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">Header</div>
+      <div class="card-body text-dark">
+        <h5 class="card-title">Dark card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+                                <a href="#">Read More</a>
+                            </div>
+                           
+                        </div>
+                        <div class="MS-controls">
+                            <button class="MS-left"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                            <button class="MS-right"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+    </div> 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container" style="margin-top:50px;">
+        <div class="row">
+             <div class="col-5">
+                <h1>Our Team</h1>
+             </div>
+             <div class="col-7">
+                <p style="max-width: 450px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ex velit, pellentesque quis condimentum at, tincidunt ac risus. Vestibulum ante ipsum primis in faucibus.</p>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="carousel-team-card" data-flickity='{ "groupCells": 3, "wrapAround": true }'>
+              <div class="carousel-team-card-cell">
+                <div class="carousel-card-team">
+                  <div class="card-team-img">
+                    <img src="https://cdn.pixabay.com/photo/2018/02/26/21/04/owl-3184032__340.jpg" alt="" />
+                  </div>
+                  <div class="card-team-name">
+                    <h3>Name</h3>
+                    <span>Position</span>
+                  </div>
+                  <div class="card-team-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et nisi id arcu bibendum efficitur. Pellentesque maximus ac libero non iaculis.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-team-card-cell">
+                <div class="carousel-card-team">
+                  <div class="card-team-img">
+                    <img src="https://cdn.pixabay.com/photo/2018/02/26/21/04/owl-3184032__340.jpg" alt="" />
+                  </div>
+                  <div class="card-team-name">
+                    <h3>Name</h3>
+                    <span>Position</span>
+                  </div>
+                  <div class="card-team-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et nisi id arcu bibendum efficitur. Pellentesque maximus ac libero non iaculis.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-team-card-cell">
+                <div class="carousel-card-team">
+                  <div class="card-team-img">
+                    <img src="https://cdn.pixabay.com/photo/2018/02/26/21/04/owl-3184032__340.jpg" alt="" />
+                  </div>
+                  <div class="card-team-name">
+                    <h3>Name</h3>
+                    <span>Position</span>
+                  </div>
+                  <div class="card-team-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et nisi id arcu bibendum efficitur. Pellentesque maximus ac libero non iaculis.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-team-card-cell">
+                <div class="carousel-card-team">
+                  <div class="card-team-img">
+                    <img src="https://cdn.pixabay.com/photo/2018/02/26/21/04/owl-3184032__340.jpg" alt="" />
+                  </div>
+                  <div class="card-team-name">
+                    <h3>Name</h3>
+                    <span>Position</span>
+                  </div>
+                  <div class="card-team-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et nisi id arcu bibendum efficitur. Pellentesque maximus ac libero non iaculis.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-team-card-cell">
+                <div class="carousel-card-team">
+                  <div class="card-team-img">
+                    <img src="https://cdn.pixabay.com/photo/2018/02/26/21/04/owl-3184032__340.jpg" alt="" />
+                  </div>
+                  <div class="card-team-name">
+                    <h3>Name</h3>
+                    <span>Position</span>
+                  </div>
+                  <div class="card-team-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et nisi id arcu bibendum efficitur. Pellentesque maximus ac libero non iaculis.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-team-card-cell">
+                <div class="carousel-card-team">
+                  <div class="card-team-img">
+                    <img src="https://cdn.pixabay.com/photo/2018/02/26/21/04/owl-3184032__340.jpg" alt="" />
+                  </div>
+                  <div class="card-team-name">
+                    <h3>Name</h3>
+                    <span>Position</span>
+                  </div>
+                  <div class="card-team-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et nisi id arcu bibendum efficitur. Pellentesque maximus ac libero non iaculis.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<style>
+
+
+body
+
+{
+  overflow: hidden;
+  clear: both;
+}
+@media (min-width: 768px) {
+
+  /* show 4 items */
+  .carousel-inner .active,
+  .carousel-inner .active + .carousel-item,
+  .carousel-inner .active + .carousel-item + .carousel-item,
+  .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+    display: block;
+  }
+
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+    transition: none;
+  }
+
+  .carousel-inner .carousel-item-next,
+  .carousel-inner .carousel-item-prev {
+    position: relative;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: absolute;
+    top: 0;
+    right: -25%;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* left or forward direction */
+  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+  .carousel-item-next.carousel-item-left + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  /* farthest right hidden item must be absolue position for animations */
+  .carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* right or prev direction */
+  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+  .carousel-item-prev.carousel-item-right + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
+  }
+}
+</style>
+      <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
+      <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+      <script>
+      
+      $(document).ready(function() {
+  $("#myCarousel").on("slide.bs.carousel", function(e) {
+    var $e = $(e.relatedTarget);
+    var idx = $e.index();
+    var itemsPerSlide = 4;
+    var totalItems = $(".carousel-item").length;
+
+    if (idx >= totalItems - (itemsPerSlide - 1)) {
+      var it = itemsPerSlide - (totalItems - idx);
+      for (var i = 0; i < it; i++) {
+        // append slides to end
+        if (e.direction == "left") {
+          $(".carousel-item")
+            .eq(i)
+            .appendTo(".carousel-inner");
+        } else {
+          $(".carousel-item")
+            .eq(0)
+            .appendTo($(this).find(".carousel-inner"));
+        }
+      }
+    }
+  });
+});
+
+    $('#basicSlider').multislider({
+          continuous: true,
+          duration: 2000
+        });
+        $('#mixedSlider').multislider({
+          duration: 750,
+          interval: 3000
+        });
+
+
+      </script>
+</body>
+</html>
+
